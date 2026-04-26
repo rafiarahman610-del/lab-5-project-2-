@@ -89,5 +89,64 @@ Here’s how a basic OCR system works:
 
 * Digitizing books 
 * License plate recognition 
-* Bank cheque processing 
+* Bank cheque processing
+
+  
+## WEEK: 6 
+  ## Image Preprocessing + Convolutional Neural Networks
+
+  
+#  Project Overview
+
+This project combines **Image Preprocessing techniques** with a **Convolutional Neural Network (CNN)** to build an intelligent system for image understanding and classification. The main goal is to first clean and enhance input images using classical image processing methods and then apply a deep learning model to classify the processed data accurately.
+
+The system is implemented using Python with OpenCV for image preprocessing and TensorFlow/Keras for building and training the CNN model on the MNIST dataset of handwritten digits.
+
+---
+
+#  Project Summary
+
+### 1) Image Preprocessing Phase
+
+In this phase, input images are improved to make them suitable for machine learning:
+
+* Conversion to grayscale
+* Noise removal using morphological operations:
+
+  * Erosion
+  * Dilation
+  * Opening
+  * Closing
+* Deskewing (straightening tilted images)
+* Perspective transformation for proper alignment
+
+ Purpose: Image ko clean aur structured banana taake model easily features extract kar sake.
+
+### 2) Deep Learning Phase (CNN Model)
+
+A Convolutional Neural Network is designed and trained using MNIST dataset:
+
+* Input images reshaped to 28×28×1
+* Normalization (pixel values 0–1 range me)
+* One-hot encoding of labels
+* CNN architecture:
+
+  * Convolution layers (feature extraction)
+  * MaxPooling layers (dimension reduction)
+  * Flatten layer
+  * Dense layers (classification)
+  * Dropout layer (overfitting control)
+* Model compiled using Adam optimizer and categorical crossentropy loss
+* Trained on training data and evaluated on test data
+
+
+#  Final Output
+
+* Model handwritten digits (0–9) accurately classify karta hai
+* Preprocessing improve karta hai input image quality
+* CNN automatically features learn karta hai without manual feature engineering
+* Final accuracy test dataset par evaluate hoti hai
+
+
+
   
