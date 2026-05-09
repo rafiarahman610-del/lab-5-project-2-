@@ -1,152 +1,97 @@
-# lab-5-project-2
+# project-2
 
-## Receipt OCR Analyzer
+# Project Name:
 
-Here’s a clear, presentation-ready explanation of a **Basic OCR (Optical Character Recognition) Project**—including overview, features, and working:
-
-## 1. Project Overview
-
-**OCR (Optical Character Recognition)** is a technology that converts text from images, scanned documents, or PDFs into editable and searchable digital text.
-
- A **basic OCR project** typically:
-
-* Takes an image (e.g., scanned document, handwritten note)
-* Detects text inside it
-* Converts that text into machine-readable format (like a `.txt` file)
-
- Example:
-You upload an image of a printed page → OCR extracts the text → you can copy/edit it.
-
-## 2. Key Features
-
-A simple OCR system usually includes:
-
-###  Text Detection
-
-* Identifies where text exists in the image
-
-###  Text Recognition
-
-* Converts detected text into actual characters (A–Z, numbers, symbols)
-
-###  Multi-format Input
-
-* Supports images like JPG, PNG, or scanned PDFs
-
-###  Language Support
-
-* Can recognize English (basic systems), sometimes multiple languages
-
-###  Preprocessing
-
-* Improves image quality (noise removal, grayscale conversion)
-
-###  Output Options
-
-* Displays extracted text on screen
-* Saves text into files (TXT, PDF)
+## AI-Powered Document Intelligence System
 
 
-## 3. Working 
+# Project Summary
 
-Here’s how a basic OCR system works:
+The AI-Powered Document Intelligence System is a machine learning and OCR-based application developed to automatically classify and process different types of documents such as invoices, receipts, and contracts. The system uses Optical Character Recognition (OCR) to extract text from uploaded document images and then applies Natural Language Processing (NLP) techniques for document classification and information extraction.
 
-###  Step 1: Image Input
+The project integrates TF-IDF vectorization with a Logistic Regression classifier to accurately identify document categories. A REST API was developed using FastAPI to provide endpoints for document classification, text extraction, and complete document processing.
 
-* User uploads or scans an image
+The system is capable of:
 
-###  Step 2: Preprocessing
+* Extracting text from document images using Tesseract OCR
+* Classifying documents into multiple categories
+* Providing confidence scores for predictions
+* Processing uploaded files through REST API endpoints
+* Returning structured JSON responses
 
-* Convert image to grayscale
-* Remove noise
-* Adjust brightness/contrast
-* Binarization (black & white conversion)
+This project demonstrates practical implementation of:
 
- Purpose: Improve accuracy
+* OCR (Optical Character Recognition)
+* Machine Learning Classification
+* NLP Text Vectorization
+* REST API Development
+* FastAPI Deployment
 
-### Step 3: Text Detection
-
-* System finds regions where text is present
-* Uses bounding boxes around text areas
-
-
-###  Step 4: Character Recognition
-
-* Each character is identified using pattern recognition or AI models
-* Converts image pixels → actual letters
-
-
-## 4. Tools & Technologies 
-
-
-* Python
-* OpenCV (image processing)
-* Tesseract OCR engine
-* PIL (Python Imaging Library)
-
-
-##  5. Applications
-
-* Digitizing books 
-* License plate recognition 
-* Bank cheque processing
-
-  
-## WEEK: 6 
-  ## Image Preprocessing + Convolutional Neural Networks
-
-  
-#  Project Overview
-
-This project combines **Image Preprocessing techniques** with a **Convolutional Neural Network (CNN)** to build an intelligent system for image understanding and classification. The main goal is to first clean and enhance input images using classical image processing methods and then apply a deep learning model to classify the processed data accurately.
-
-The system is implemented using Python with OpenCV for image preprocessing and TensorFlow/Keras for building and training the CNN model on the MNIST dataset of handwritten digits.
+The system was designed as a production-ready document processing pipeline and can be extended for real-world business automation applications such as invoice management, receipt analysis, and contract processing. 
 
 ---
 
-#  Project Summary
+# Technologies Used
 
-### 1) Image Preprocessing Phase
-
-In this phase, input images are improved to make them suitable for machine learning:
-
-* Conversion to grayscale
-* Noise removal using morphological operations:
-
-  * Erosion
-  * Dilation
-  * Opening
-  * Closing
-* Deskewing (straightening tilted images)
-* Perspective transformation for proper alignment
-
- Purpose: Image ko clean aur structured banana taake model easily features extract kar sake.
-
-### 2) Deep Learning Phase (CNN Model)
-
-A Convolutional Neural Network is designed and trained using MNIST dataset:
-
-* Input images reshaped to 28×28×1
-* Normalization (pixel values 0–1 range me)
-* One-hot encoding of labels
-* CNN architecture:
-
-  * Convolution layers (feature extraction)
-  * MaxPooling layers (dimension reduction)
-  * Flatten layer
-  * Dense layers (classification)
-  * Dropout layer (overfitting control)
-* Model compiled using Adam optimizer and categorical crossentropy loss
-* Trained on training data and evaluated on test data
+* Python
+* FastAPI
+* Scikit-learn
+* Tesseract OCR
+* PIL (Python Imaging Library)
+* Logistic Regression
+* TF-IDF Vectorizer
+* Joblib
+* Uvicorn
 
 
-#  Final Output
+# Main Features
 
-* Model handwritten digits (0–9) accurately classify karta hai
-* Preprocessing improve karta hai input image quality
-* CNN automatically features learn karta hai without manual feature engineering
-* Final accuracy test dataset par evaluate hoti hai
+* OCR-based text extraction
+* Document classification
+* REST API integration
+* Swagger API documentation
+* JSON response generation
+* Confidence score prediction
+* Image upload support
+
+
+# Document Categories
+
+The classifier was trained to identify:
+
+* Invoices
+* Receipts
+* Contracts 
+
+
+# API Endpoints
+
+| Endpoint    | Purpose                                             |
+| ----------- | --------------------------------------------------- |
+| `/classify` | Classify uploaded document                          |
+| `/extract`  | Extract text and entities                           |
+| `/process`  | Complete OCR + Classification + Extraction pipeline |
+| `/docs`     | Interactive Swagger documentation                   |
+
+---
+
+# Objective of the Project
+
+The main objective of this project is to automate document understanding and reduce manual document processing efforts using Artificial Intelligence and Machine Learning techniques. The system provides a scalable and efficient solution for intelligent document analysis.
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
